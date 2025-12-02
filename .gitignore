@@ -1,0 +1,10 @@
+# Database files
+*.vscdb
+
+# Large JSON files
+parsed_chats.json
+parsed_chats_tstate.json
+
+# Garbage files
+garbage_python.py
+
