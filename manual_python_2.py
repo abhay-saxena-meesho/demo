@@ -38,8 +38,13 @@ def run_blockchain_demo():
     print("1. Mining block 1 with data: {amount: 4}...")
     my_coin.add_block(Block(1, time(), {"amount": 4}, ""))
     print("2. Mining block 2 with data: {amount: 10}...")
-    print("--- SIMPLE BLOCKCHAIN DEMO ---")
-    my_coin = Blockchain()
-    print("1. Mining block 1 with data: {amount: 4}...")
-    my_coin.add_block(Block(1, time(), {"amount": 4}, ""))
-    print("2. Mining block 2 with data: {amount: 10}...")
+    my_coin.add_block(Block(2, time(), {"amount": 10}, ""))
+    print(f"3. Chain validity check: {my_coin.is_chain_valid()}")
+    print("4. Tampering with Block 1 data...")
+    my_coin.chain[1].data = {"amount": 1000}
+    print(f"5. Chain validity after tamper: {my_coin.is_chain_valid()}")
+    print("\n--- FINAL CHAIN DATA ---")
+    for block in my_coin.chain:
+        print(f"Index: {block.index} | Hash: {block.hash[:10]}... | Data: {block.data}")
+if __name__ == "__main__":
+    run_blockchain_demo()
