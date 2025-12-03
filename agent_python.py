@@ -4,7 +4,7 @@ def calculate_sum(a, b):
     return a + b
 def main():
     user_name = "World"
-    result = calculate_sum(5, 3)
+    result = calculate_sum(8,5)
     print(greet(user_name))
-    print(f"Sum: {result}")
+    print(f"Sum: {result}, ok?")
 main()
