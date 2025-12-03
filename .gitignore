@@ -8,3 +8,5 @@ parsed_chats_tstate.json
 # Garbage files
 garbage_python.py
 
+.pre-commit-config.yaml
+trufflehog/
