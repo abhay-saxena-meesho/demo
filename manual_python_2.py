@@ -53,3 +53,13 @@ def dummy_function_one():
     return sum(x) * 42
 def dummy_function_two():
     garbage_data = {"foo": "bar", "baz": [1, 2, 3, 4, 5]}
+    return garbage_data.get("foo")
+def dummy_function_three():
+    result = 0
+    for i in range(50):
+        result += i * 3
+    return result
+def dummy_function_four():
+    my_list = [x for x in range(20) if x % 2 == 0]
+    my_dict = {str(k): v**3 for k, v in enumerate(my_list)}
+    return len(my_dict)
