@@ -38,3 +38,8 @@ def run_blockchain_demo():
     print("1. Mining block 1 with data: {amount: 4}...")
     my_coin.add_block(Block(1, time(), {"amount": 4}, ""))
     print("2. Mining block 2 with data: {amount: 10}...")
+    print("--- SIMPLE BLOCKCHAIN DEMO ---")
+    my_coin = Blockchain()
+    print("1. Mining block 1 with data: {amount: 4}...")
+    my_coin.add_block(Block(1, time(), {"amount": 4}, ""))
+    print("2. Mining block 2 with data: {amount: 10}...")
