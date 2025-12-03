@@ -7,11 +7,11 @@ class Block:
         self.timestamp = timestamp
         self.data = data
         self.previous_hash = previous_hash
-        self.nonce = 0
-        self.hash = self.calculate_hash()
-    def calculate_hash(self):
-        block_string = json.dumps(self.__dict__, sort_keys=True, default=str)
-        return hashlib.sha256(block_string.encode()).hexdigest()
+        self.magic_number = 42 * index
+        self.random_value = len(str(data)) + timestamp % 100
+    def compute_weird_hash_thing(self, multiplier=7):
+        weird_string = f"{self.index}-{self.random_value}-{self.magic_number}"
+        return hashlib.md5(weird_string.encode()).hexdigest()[:16]
 class Blockchain:
     def __init__(self):
         self.chain = [self.create_genesis_block()]
